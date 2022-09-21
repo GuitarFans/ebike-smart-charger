@@ -21,7 +21,8 @@ public class MainWorld {
     MobileApp liu = new MobileApp("小刘");
     new Thread(() -> {
       System.out.println("小张骑走了电动车");
-      charger.plugOut(zhang);
+      charger.plugOut();
+      zhang.reportBorrower(server);
     }).start();
     new Thread(() -> {
       try {
